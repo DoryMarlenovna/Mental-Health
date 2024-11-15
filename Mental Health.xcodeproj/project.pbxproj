@@ -8,17 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		91E7B3A22CE7B4AA0004E927 /* Mental_HealthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E7B3A12CE7B4AA0004E927 /* Mental_HealthApp.swift */; };
-		91E7B3A42CE7B4AA0004E927 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E7B3A32CE7B4AA0004E927 /* ContentView.swift */; };
+		91E7B3A42CE7B4AA0004E927 /* BooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E7B3A32CE7B4AA0004E927 /* BooksView.swift */; };
 		91E7B3A62CE7B4AB0004E927 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91E7B3A52CE7B4AB0004E927 /* Assets.xcassets */; };
 		91E7B3A92CE7B4AB0004E927 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91E7B3A82CE7B4AB0004E927 /* Preview Assets.xcassets */; };
+		91E7B3B52CE7BEAA0004E927 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E7B3B42CE7BEAA0004E927 /* BookModel.swift */; };
+		91E7B3BC2CE7BFA20004E927 /* 4.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 91E7B3B62CE7BFA20004E927 /* 4.pdf */; };
+		91E7B3BD2CE7BFA20004E927 /* 3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 91E7B3B72CE7BFA20004E927 /* 3.pdf */; };
+		91E7B3BE2CE7BFA20004E927 /* 6.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 91E7B3B82CE7BFA20004E927 /* 6.pdf */; };
+		91E7B3BF2CE7BFA20004E927 /* image.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 91E7B3B92CE7BFA20004E927 /* image.pdf */; };
+		91E7B3C02CE7BFA20004E927 /* 5.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 91E7B3BA2CE7BFA20004E927 /* 5.pdf */; };
+		91E7B3C12CE7BFA20004E927 /* 2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 91E7B3BB2CE7BFA20004E927 /* 2.pdf */; };
+		91E7B3C42CE7C2F90004E927 /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 91E7B3C22CE7C2F90004E927 /* icon1.png */; };
+		91E7B3C52CE7C2F90004E927 /* icon2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 91E7B3C32CE7C2F90004E927 /* icon2.pdf */; };
+		91E7B3C72CE7C39A0004E927 /* icon1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 91E7B3C62CE7C39A0004E927 /* icon1.pdf */; };
+		91E7B3C92CE7C6300004E927 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E7B3C82CE7C6300004E927 /* SplashScreenView.swift */; };
+		91E7B3CB2CE7C6530004E927 /* splash.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 91E7B3CA2CE7C6530004E927 /* splash.pdf */; };
+		91E7B3CD2CE7C7D10004E927 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E7B3CC2CE7C7D10004E927 /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		91E7B39E2CE7B4AA0004E927 /* Mental Health.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mental Health.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E7B3A12CE7B4AA0004E927 /* Mental_HealthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mental_HealthApp.swift; sourceTree = "<group>"; };
-		91E7B3A32CE7B4AA0004E927 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		91E7B3A32CE7B4AA0004E927 /* BooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksView.swift; sourceTree = "<group>"; };
 		91E7B3A52CE7B4AB0004E927 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91E7B3A82CE7B4AB0004E927 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		91E7B3B42CE7BEAA0004E927 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
+		91E7B3B62CE7BFA20004E927 /* 4.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 4.pdf; sourceTree = "<group>"; };
+		91E7B3B72CE7BFA20004E927 /* 3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 3.pdf; sourceTree = "<group>"; };
+		91E7B3B82CE7BFA20004E927 /* 6.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 6.pdf; sourceTree = "<group>"; };
+		91E7B3B92CE7BFA20004E927 /* image.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = image.pdf; sourceTree = "<group>"; };
+		91E7B3BA2CE7BFA20004E927 /* 5.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 5.pdf; sourceTree = "<group>"; };
+		91E7B3BB2CE7BFA20004E927 /* 2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 2.pdf; sourceTree = "<group>"; };
+		91E7B3C22CE7C2F90004E927 /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
+		91E7B3C32CE7C2F90004E927 /* icon2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = icon2.pdf; sourceTree = "<group>"; };
+		91E7B3C62CE7C39A0004E927 /* icon1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = icon1.pdf; sourceTree = "<group>"; };
+		91E7B3C82CE7C6300004E927 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		91E7B3CA2CE7C6530004E927 /* splash.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = splash.pdf; sourceTree = "<group>"; };
+		91E7B3CC2CE7C7D10004E927 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +77,11 @@
 		91E7B3A02CE7B4AA0004E927 /* Mental Health */ = {
 			isa = PBXGroup;
 			children = (
-				91E7B3A12CE7B4AA0004E927 /* Mental_HealthApp.swift */,
-				91E7B3A32CE7B4AA0004E927 /* ContentView.swift */,
-				91E7B3A52CE7B4AB0004E927 /* Assets.xcassets */,
+				91E7B3B32CE7B6D20004E927 /* ViewModel */,
+				91E7B3B22CE7B6CD0004E927 /* View */,
+				91E7B3B12CE7B6C30004E927 /* Model */,
+				91E7B3B02CE7B6BA0004E927 /* Resourse */,
+				91E7B3AF2CE7B6600004E927 /* Constant */,
 				91E7B3A72CE7B4AB0004E927 /* Preview Content */,
 			);
 			path = "Mental Health";
@@ -65,6 +93,57 @@
 				91E7B3A82CE7B4AB0004E927 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		91E7B3AF2CE7B6600004E927 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				91E7B3A12CE7B4AA0004E927 /* Mental_HealthApp.swift */,
+				91E7B3A52CE7B4AB0004E927 /* Assets.xcassets */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		91E7B3B02CE7B6BA0004E927 /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				91E7B3CA2CE7C6530004E927 /* splash.pdf */,
+				91E7B3C62CE7C39A0004E927 /* icon1.pdf */,
+				91E7B3C22CE7C2F90004E927 /* icon1.png */,
+				91E7B3C32CE7C2F90004E927 /* icon2.pdf */,
+				91E7B3BB2CE7BFA20004E927 /* 2.pdf */,
+				91E7B3B62CE7BFA20004E927 /* 4.pdf */,
+				91E7B3B72CE7BFA20004E927 /* 3.pdf */,
+				91E7B3BA2CE7BFA20004E927 /* 5.pdf */,
+				91E7B3B82CE7BFA20004E927 /* 6.pdf */,
+				91E7B3B92CE7BFA20004E927 /* image.pdf */,
+			);
+			path = Resourse;
+			sourceTree = "<group>";
+		};
+		91E7B3B12CE7B6C30004E927 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				91E7B3B42CE7BEAA0004E927 /* BookModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		91E7B3B22CE7B6CD0004E927 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				91E7B3A32CE7B4AA0004E927 /* BooksView.swift */,
+				91E7B3C82CE7C6300004E927 /* SplashScreenView.swift */,
+				91E7B3CC2CE7C7D10004E927 /* OnboardingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		91E7B3B32CE7B6D20004E927 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +204,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91E7B3BD2CE7BFA20004E927 /* 3.pdf in Resources */,
+				91E7B3CB2CE7C6530004E927 /* splash.pdf in Resources */,
+				91E7B3C02CE7BFA20004E927 /* 5.pdf in Resources */,
+				91E7B3BE2CE7BFA20004E927 /* 6.pdf in Resources */,
+				91E7B3BF2CE7BFA20004E927 /* image.pdf in Resources */,
+				91E7B3BC2CE7BFA20004E927 /* 4.pdf in Resources */,
 				91E7B3A92CE7B4AB0004E927 /* Preview Assets.xcassets in Resources */,
 				91E7B3A62CE7B4AB0004E927 /* Assets.xcassets in Resources */,
+				91E7B3C72CE7C39A0004E927 /* icon1.pdf in Resources */,
+				91E7B3C12CE7BFA20004E927 /* 2.pdf in Resources */,
+				91E7B3C52CE7C2F90004E927 /* icon2.pdf in Resources */,
+				91E7B3C42CE7C2F90004E927 /* icon1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +226,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91E7B3A42CE7B4AA0004E927 /* ContentView.swift in Sources */,
+				91E7B3B52CE7BEAA0004E927 /* BookModel.swift in Sources */,
+				91E7B3A42CE7B4AA0004E927 /* BooksView.swift in Sources */,
 				91E7B3A22CE7B4AA0004E927 /* Mental_HealthApp.swift in Sources */,
+				91E7B3CD2CE7C7D10004E927 /* OnboardingView.swift in Sources */,
+				91E7B3C92CE7C6300004E927 /* SplashScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
