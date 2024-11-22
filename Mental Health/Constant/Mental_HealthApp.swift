@@ -11,7 +11,7 @@ import SwiftUI
 struct Mental_HealthApp: App {
     var body: some Scene {
         WindowGroup {
-            SplashScreenView()
+            BooksView()
         }
     }
 }
