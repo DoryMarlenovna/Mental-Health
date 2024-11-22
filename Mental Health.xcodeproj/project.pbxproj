@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B3E28492CF121D20017A86B /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3E28482CF121D20017A86B /* CarouselView.swift */; };
+		8B3E284B2CF123B20017A86B /* OnBordingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3E284A2CF123B20017A86B /* OnBordingModel.swift */; };
 		91E7B3A22CE7B4AA0004E927 /* Mental_HealthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E7B3A12CE7B4AA0004E927 /* Mental_HealthApp.swift */; };
 		91E7B3A42CE7B4AA0004E927 /* BooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E7B3A32CE7B4AA0004E927 /* BooksView.swift */; };
 		91E7B3A62CE7B4AB0004E927 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91E7B3A52CE7B4AB0004E927 /* Assets.xcassets */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B3E28482CF121D20017A86B /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		8B3E284A2CF123B20017A86B /* OnBordingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBordingModel.swift; sourceTree = "<group>"; };
 		91E7B39E2CE7B4AA0004E927 /* Mental Health.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mental Health.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E7B3A12CE7B4AA0004E927 /* Mental_HealthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mental_HealthApp.swift; sourceTree = "<group>"; };
 		91E7B3A32CE7B4AA0004E927 /* BooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksView.swift; sourceTree = "<group>"; };
@@ -58,6 +62,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B3E28462CF1205E0017A86B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8B3E28472CF1217D0017A86B /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				8B3E28482CF121D20017A86B /* CarouselView.swift */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
 		91E7B3952CE7B4AA0004E927 = {
 			isa = PBXGroup;
 			children = (
@@ -77,7 +96,7 @@
 		91E7B3A02CE7B4AA0004E927 /* Mental Health */ = {
 			isa = PBXGroup;
 			children = (
-				91E7B3B32CE7B6D20004E927 /* ViewModel */,
+				8B3E28462CF1205E0017A86B /* ViewController */,
 				91E7B3B22CE7B6CD0004E927 /* View */,
 				91E7B3B12CE7B6C30004E927 /* Model */,
 				91E7B3B02CE7B6BA0004E927 /* Resourse */,
@@ -125,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				91E7B3B42CE7BEAA0004E927 /* BookModel.swift */,
+				8B3E284A2CF123B20017A86B /* OnBordingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,18 +152,12 @@
 		91E7B3B22CE7B6CD0004E927 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8B3E28472CF1217D0017A86B /* Carousel */,
 				91E7B3A32CE7B4AA0004E927 /* BooksView.swift */,
 				91E7B3C82CE7C6300004E927 /* SplashScreenView.swift */,
 				91E7B3CC2CE7C7D10004E927 /* OnboardingView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		91E7B3B32CE7B6D20004E927 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,8 +242,10 @@
 			files = (
 				91E7B3B52CE7BEAA0004E927 /* BookModel.swift in Sources */,
 				91E7B3A42CE7B4AA0004E927 /* BooksView.swift in Sources */,
+				8B3E284B2CF123B20017A86B /* OnBordingModel.swift in Sources */,
 				91E7B3A22CE7B4AA0004E927 /* Mental_HealthApp.swift in Sources */,
 				91E7B3CD2CE7C7D10004E927 /* OnboardingView.swift in Sources */,
+				8B3E28492CF121D20017A86B /* CarouselView.swift in Sources */,
 				91E7B3C92CE7C6300004E927 /* SplashScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

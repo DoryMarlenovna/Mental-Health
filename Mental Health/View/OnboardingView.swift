@@ -15,41 +15,38 @@ struct OnboardingView: View {
                 .padding()
             Spacer()
             
-                Text("Welcome ")
-                    .foregroundColor(Color("green"))
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                +
-                Text("to Calmind")
-                    .foregroundColor(.black)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                
-            HStack{
-                Image("onboarding")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxWidth: 255, maxHeight: 177)
-                    .padding(.bottom, 90)
-                
-                Image("onboard")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxWidth: 255, maxHeight: 177)
-                    .padding(.bottom, 90)
-                
-                Image("onboa")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxWidth: 255, maxHeight: 177)
-                    .padding(.bottom, 90)
-                
-            }
-        
+//            Group {
+//                Text("Welcome ")
+//                    .foregroundColor(Color("green"))
+//                    .font(.largeTitle)
+//                    .fontWeight(.bold)
+//                +
+//                Text("to Calmind")
+//                    .foregroundColor(.black)
+//                    .font(.largeTitle)
+//                    .fontWeight(.bold)
+//            }
+//            .padding()
+//            
+            CarouselView(items: [
+                OnBordingModel(title: "Welcome to Calmind!",
+                               imageName: "onboarding"),
+                OnBordingModel(title: "We're here to help you take care of your mental health",
+                               imageName: "onboard"),
+                OnBordingModel(title: "Find out how we can support you",
+                               imageName: "onboa")
+            ])
+            
+            
+            Spacer()
+            
+            Text("Calmind")
+                .font(.system(size: 22, weight: .bold))
+            
         }
     }
-    }
-    
+}
+
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
