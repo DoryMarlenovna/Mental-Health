@@ -76,11 +76,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8B3E28462CF1205E0017A86B /* ViewController */ = {
+		8B3E28462CF1205E0017A86B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = ViewController;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		8B3E28472CF1217D0017A86B /* Carousel */ = {
@@ -129,7 +129,7 @@
 		91E7B3A02CE7B4AA0004E927 /* Mental Health */ = {
 			isa = PBXGroup;
 			children = (
-				8B3E28462CF1205E0017A86B /* ViewController */,
+				8B3E28462CF1205E0017A86B /* ViewModel */,
 				91E7B3B22CE7B6CD0004E927 /* View */,
 				91E7B3B12CE7B6C30004E927 /* Model */,
 				91E7B3B02CE7B6BA0004E927 /* Resourse */,
