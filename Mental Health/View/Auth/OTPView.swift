@@ -46,7 +46,7 @@ struct OTPView: View {
     private var backBtn: some View {
         HStack{
             Button(action: {
-//                router.navigateBack()
+                router.navigateBack()
             }, label: {
                 Image(systemName: "arrowshape.turn.up.backward")
                     .padding(12)
@@ -83,7 +83,7 @@ struct OTPView: View {
             checkCode()
 
             if vm.checkOTP == .correct {
-                router.navigate(to: .bookView)
+                router.navigate(to: .signUp)
             }
         } label: {
             Text("Verify code")
@@ -113,7 +113,7 @@ struct OTPView: View {
     
     private var signInBtn: some View {
         Button {
-//            router.navigate(to: .signIn)
+            router.navigate(to: .signIN)
         } label: {
             Group {
                 
@@ -121,7 +121,7 @@ struct OTPView: View {
                     .font(.system(size: 12, weight: .regular))
                     .foregroundStyle(Color(.systemGray3))
 
-                Text("Sign Up")
+                Text("Sign In")
                     .foregroundColor(.black)
                     .font(.system(size: 12, weight: .semibold))
                     .onTapGesture {

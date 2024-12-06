@@ -23,7 +23,7 @@ struct SignInView: View {
             Text("Sign Up")
                 .foregroundColor(.black)
                 .onTapGesture {
-                    router.navigate(to: .signUp)
+                    router.navigate(to: .phoneReg)
                 }
         }
         .font(.system(size: 12, weight: .medium))
@@ -61,7 +61,7 @@ struct SignInView: View {
             passwordIsTrue = password == "1234"
             
             if passwordIsTrue! {
-                router.navigate(to: .phoneReg)
+                router.navigate(to: .bookView)
             }
         }, label: {
             Text("Sign In")
@@ -196,7 +196,7 @@ struct SignInView: View {
             Spacer()
         }
         .frame(maxWidth: .infinity,
-               maxHeight: UIScreen.main.bounds.height * 0.6)
+               maxHeight: UIScreen.main.bounds.height * 0.7)
         .background(Color.white)
         .cornerRadius(30)
     }
