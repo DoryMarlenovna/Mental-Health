@@ -2,19 +2,32 @@
 //  SignUpView.swift
 //  Mental Health
 //
-//  Created by bakebrlk on 06.12.2024.
+//  Created by bakebrlk on 29.11.2024.
 //
 
 import SwiftUI
 
-struct SignUpView: View {
+struct SignInView: View {
+    @EnvironmentObject var router: Router
+
     @State private var phone: String = ""
     @State private var password: String = ""
-    @State private var confPassword: String = ""
     @State private var isSecure: Bool = true
     @State private var passwordIsTrue: Bool? = nil
-    @State private var checkAgree: Bool = false
-    @EnvironmentObject var router: Router
+    
+    private var signUp: some View {
+        HStack {
+            Text("Don’t have an account")
+                .foregroundColor(.gray)
+            
+            Text("Sign Up")
+                .foregroundColor(.black)
+                .onTapGesture {
+                    router.navigate(to: .signUp)
+                }
+        }
+        .font(.system(size: 12, weight: .medium))
+    }
     
     private var images: [String] = ["google", "apple", "facebook"]
     
@@ -25,17 +38,33 @@ struct SignUpView: View {
             }
         }
     }
-
+    
+    private var orText: some View {
+        HStack{
+            RoundedRectangle(cornerRadius: 1)       
+                .stroke(Color.gray, lineWidth: 1)
+                .frame(maxWidth: .infinity, maxHeight: 1)
+                .padding(.leading)
+            
+            Text("or")
+                .padding([.leading, .trailing])
+            
+            RoundedRectangle(cornerRadius: 1)
+                .stroke(Color.gray, lineWidth: 1)
+                .frame(maxWidth: .infinity, maxHeight: 1)
+                .padding(.trailing)
+        }
+    }
     
     private var btn: some View {
         Button(action: {
             passwordIsTrue = password == "1234"
             
-            if passwordIsTrue! && password == confPassword {
-                router.navigate(to: .bookView)
+            if passwordIsTrue! {
+                router.navigate(to: .phoneReg)
             }
         }, label: {
-            Text("Sign Up")
+            Text("Sign In")
                 .frame(maxWidth: .infinity)
                 .multilineTextAlignment(.center)
                 .font(.system(size: 22, weight: .medium))
@@ -47,6 +76,18 @@ struct SignUpView: View {
         .padding()
     }
     
+    private var forgotPassword: some View {
+        Text("Forgot Password?")
+            .frame(maxWidth: .infinity, alignment: .trailing)
+            .multilineTextAlignment(.center)
+            .font(.system(size: 16, weight: .medium))
+            .foregroundColor(.black)
+            .padding(.trailing)
+            .onTapGesture {
+                router.navigate(to: .forgotPassword)
+            }
+    }
+    
     func getTextField(hint: String, tf: Binding<String>, isSecure: Binding<Bool>?) -> some View {
         
         VStack{
@@ -56,8 +97,8 @@ struct SignUpView: View {
                     getImage(systemName: "lock.fill", size: 12)
                         .padding(.leading)
                 }else {
-                    getImage(systemName: "person.fill", size: 15)
-                        .padding(.leading)
+                    getImage(named: "kz", size: 25)
+                    getImage(systemName: "chevron.down", size: 10)
                 }
                 
                 Spacer()
@@ -125,7 +166,7 @@ struct SignUpView: View {
     }
     
     var title: some View {
-        Text("Hello!")
+        Text("Welcome Back!")
             .frame(maxWidth: .infinity)
             .multilineTextAlignment(.center)
             .font(.system(size: 28, weight: .semibold))
@@ -133,64 +174,15 @@ struct SignUpView: View {
             .padding(.top, 30)
     }
     
-    var agreeView: some View {
-        Button {
-            withAnimation{
-                checkAgree.toggle()
-            }
-        } label: {
-            HStack {
-                
-                ZStack{
-                    if checkAgree {
-                        getImage(systemName: "checkmark", size: 12)
-                            .padding(.leading)
-                    }
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(lineWidth: 1)
-                        .frame(maxWidth: 20, maxHeight: 20)
-                        .foregroundColor(.gray)
-                }
-                
-                Text("I agree to all the")
-                    .font(.system(size: 16))
-                    .foregroundColor(.gray)
-                
-                Spacer()
-            }
-            .padding(.leading)
-        }
-
-    }
-    
-    private var orText: some View {
-        HStack{
-            RoundedRectangle(cornerRadius: 1)
-                .stroke(Color.gray, lineWidth: 1)
-                .frame(maxWidth: .infinity, maxHeight: 1)
-                .padding(.leading)
-            
-            Text("or")
-                .padding([.leading, .trailing])
-            
-            RoundedRectangle(cornerRadius: 1)
-                .stroke(Color.gray, lineWidth: 1)
-                .frame(maxWidth: .infinity, maxHeight: 1)
-                .padding(.trailing)
-        }
-    }
-
-    
     var box: some View {
         VStack{
             title
             Spacer()
-            getTextField(hint: "Login", tf: $phone, isSecure: nil)
+            getTextField(hint: "Phone number", tf: $phone, isSecure: nil)
             getTextField(hint: "Password", tf: $password, isSecure: $isSecure)
-            getTextField(hint: "Re-enter  password", tf: $confPassword, isSecure: $isSecure)
             
-            agreeView
-                        
+            forgotPassword
+            
             btn
             
             orText
@@ -199,11 +191,12 @@ struct SignUpView: View {
             
             Spacer()
 
+            signUp
             
             Spacer()
         }
         .frame(maxWidth: .infinity,
-               maxHeight: UIScreen.main.bounds.height * 0.712)
+               maxHeight: UIScreen.main.bounds.height * 0.6)
         .background(Color.white)
         .cornerRadius(30)
     }
@@ -222,5 +215,5 @@ struct SignUpView: View {
 }
 
 #Preview {
-    SignUpView()
+    SignInView()
 }

@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct WelcomeView: View {
-    
+    @EnvironmentObject var router: Router
+
     private var image: some View  {
         Image("chillGuy")
             .resizable()
@@ -36,7 +37,7 @@ struct WelcomeView: View {
     
     private var btn: some View {
         Button(action: {
-            
+            router.navigate(to: .signIN)
         }, label: {
             Text("Sign In")
                 .frame(maxWidth: .infinity)

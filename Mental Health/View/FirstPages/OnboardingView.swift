@@ -8,26 +8,32 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    
+    @EnvironmentObject var router: Router
+
     var body: some View {
         VStack{
             Text("Skip")
                 .frame(maxWidth:.infinity,alignment: .trailing)
                 .padding()
+                .onTapGesture {
+                    router.navigate(to: .welcome)
+                }
             Spacer()
             
-//            Group {
-//                Text("Welcome ")
-//                    .foregroundColor(Color("green"))
-//                    .font(.largeTitle)
-//                    .fontWeight(.bold)
-//                +
-//                Text("to Calmind")
-//                    .foregroundColor(.black)
-//                    .font(.largeTitle)
-//                    .fontWeight(.bold)
-//            }
-//            .padding()
-//            
+            Group {
+                Text("Welcome ")
+                    .foregroundColor(Color("green"))
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                +
+                Text("to Calmind")
+                    .foregroundColor(.black)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+            }
+            .padding()
+            
             CarouselView(items: [
                 OnBordingModel(title: "Welcome to Calmind!",
                                imageName: "onboarding"),

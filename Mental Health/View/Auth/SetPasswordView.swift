@@ -1,5 +1,5 @@
 //
-//  SignUpView.swift
+//  SetPasswordView.swift
 //  Mental Health
 //
 //  Created by bakebrlk on 06.12.2024.
@@ -7,35 +7,21 @@
 
 import SwiftUI
 
-struct SignUpView: View {
-    @State private var phone: String = ""
+struct SetPasswordView: View {
     @State private var password: String = ""
-    @State private var confPassword: String = ""
+    @State private var confirmPassword: String = ""
     @State private var isSecure: Bool = true
     @State private var passwordIsTrue: Bool? = nil
-    @State private var checkAgree: Bool = false
     @EnvironmentObject var router: Router
-    
-    private var images: [String] = ["google", "apple", "facebook"]
-    
-    private var signInWith: some View {
-        HStack {
-            ForEach(images, id: \.self) { image in
-                getImage(named: image, size: 35)
-            }
-        }
-    }
-
     
     private var btn: some View {
         Button(action: {
             passwordIsTrue = password == "1234"
-            
-            if passwordIsTrue! && password == confPassword {
-                router.navigate(to: .bookView)
+            if passwordIsTrue! && password == confirmPassword {
+                router.navigate(to: .successPage)
             }
         }, label: {
-            Text("Sign Up")
+            Text("Update Password")
                 .frame(maxWidth: .infinity)
                 .multilineTextAlignment(.center)
                 .font(.system(size: 22, weight: .medium))
@@ -43,7 +29,7 @@ struct SignUpView: View {
                 .padding()
         })
         .background(Color("green"))
-        .cornerRadius(25)
+        .cornerRadius(10)
         .padding()
     }
     
@@ -51,16 +37,6 @@ struct SignUpView: View {
         
         VStack{
             HStack{
-                
-                if isSecure != nil {
-                    getImage(systemName: "lock.fill", size: 12)
-                        .padding(.leading)
-                }else {
-                    getImage(systemName: "person.fill", size: 15)
-                        .padding(.leading)
-                }
-                
-                Spacer()
                 
                 Group {
                     if let isSecure = isSecure {
@@ -90,11 +66,11 @@ struct SignUpView: View {
             .frame(maxWidth: .infinity)
             .padding()
             .overlay{
-                RoundedRectangle(cornerRadius: 50)
-                    .stroke(((passwordIsTrue != nil && hint == "Password") ? (passwordIsTrue! ? Color("green") : Color.red) : Color.gray), lineWidth: 2)
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(((passwordIsTrue != nil && hint == "Password") ? (passwordIsTrue! ? Color("green") : Color.red) : Color(.systemGray4)), lineWidth: 2)
             }
-            .padding()
-            .cornerRadius(50)
+            .padding([.leading, .trailing])
+            .cornerRadius(10)
             
             if passwordIsTrue != nil && !passwordIsTrue! && hint == "Password" {
                 Text("Wrong password")
@@ -125,80 +101,64 @@ struct SignUpView: View {
     }
     
     var title: some View {
-        Text("Hello!")
-            .frame(maxWidth: .infinity)
-            .multilineTextAlignment(.center)
-            .font(.system(size: 28, weight: .semibold))
+        Text("Set a new password")
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .multilineTextAlignment(.leading)
+            .font(.system(size: 18, weight: .semibold))
             .foregroundColor(.black)
-            .padding(.top, 30)
-    }
-    
-    var agreeView: some View {
-        Button {
-            withAnimation{
-                checkAgree.toggle()
-            }
-        } label: {
-            HStack {
-                
-                ZStack{
-                    if checkAgree {
-                        getImage(systemName: "checkmark", size: 12)
-                            .padding(.leading)
-                    }
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(lineWidth: 1)
-                        .frame(maxWidth: 20, maxHeight: 20)
-                        .foregroundColor(.gray)
-                }
-                
-                Text("I agree to all the")
-                    .font(.system(size: 16))
-                    .foregroundColor(.gray)
-                
-                Spacer()
-            }
             .padding(.leading)
-        }
-
+    }
+    var description: some View {
+        Text("Create a new password. Ensure it differs from previous ones for security")
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .multilineTextAlignment(.leading)
+            .font(.system(size: 16, weight: .regular))
+            .foregroundColor(.gray)
+            .padding()
     }
     
-    private var orText: some View {
-        HStack{
-            RoundedRectangle(cornerRadius: 1)
-                .stroke(Color.gray, lineWidth: 1)
-                .frame(maxWidth: .infinity, maxHeight: 1)
-                .padding(.leading)
-            
-            Text("or")
-                .padding([.leading, .trailing])
-            
-            RoundedRectangle(cornerRadius: 1)
-                .stroke(Color.gray, lineWidth: 1)
-                .frame(maxWidth: .infinity, maxHeight: 1)
-                .padding(.trailing)
-        }
+    private func getTitle(text: String) -> some View {
+        Text(text)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .multilineTextAlignment(.leading)
+            .font(.system(size: 16, weight: .regular))
+            .foregroundColor(.black)
+            .padding(.leading)
     }
-
+    private var backBtn: some View {
+        HStack{
+            Button(action: {
+                router.navigateBack()
+            }, label: {
+                Image(systemName: "arrowshape.turn.up.backward")
+                    .padding(12)
+                    .foregroundColor(.white)
+                    .background(Color("green"))
+                    .cornerRadius(20)
+            })
+            Spacer()
+        }
+        .padding()
+    }
     
     var box: some View {
         VStack{
-            title
-            Spacer()
-            getTextField(hint: "Login", tf: $phone, isSecure: nil)
-            getTextField(hint: "Password", tf: $password, isSecure: $isSecure)
-            getTextField(hint: "Re-enter  password", tf: $confPassword, isSecure: $isSecure)
             
-            agreeView
-                        
+            backBtn
+            
+            title
+            
+            description
+            
+            getTitle(text: "Password")
+            getTextField(hint: "Password", tf: $password, isSecure: $isSecure)
+            
+            getTitle(text: "Confirm Password")
+                .padding(.top)
+            getTextField(hint: "Re-enter  password", tf: $confirmPassword, isSecure: $isSecure)
+            
             btn
             
-            orText
-            
-            signInWith
-            
-            Spacer()
-
             
             Spacer()
         }
@@ -210,17 +170,14 @@ struct SignUpView: View {
     
     var body: some View {
         VStack{
-            Spacer()
-            
             box
+            Spacer()
         }
-        .ignoresSafeArea()
         .frame(maxWidth: .infinity,
                maxHeight: .infinity)
-        .background(Color("green"))
     }
 }
 
 #Preview {
-    SignUpView()
+    SetPasswordView()
 }

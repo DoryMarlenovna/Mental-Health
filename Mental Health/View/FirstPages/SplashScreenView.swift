@@ -10,6 +10,7 @@ import SwiftUI
 struct SplashScreenView: View {
     
     @State private var isActive = false
+    @State private var imageScale: CGFloat = 0.5
     
     var body: some View {
         VStack{
@@ -19,11 +20,15 @@ struct SplashScreenView: View {
                 Image("splash")
                     .resizable()
                     .scaledToFit()
+                    .scaleEffect(imageScale)
                     .frame(maxWidth: 255, maxHeight: 177)
                     .padding(.bottom, 90)
             }
         }
         .onAppear {
+            withAnimation(.easeInOut(duration: 2)) {
+                imageScale = 1.0 // Увеличиваем масштаб до 100%
+            }
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 withAnimation {
                     isActive = true
